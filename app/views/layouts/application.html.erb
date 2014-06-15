@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "VOLONTER" %></title>
+    <%= render 'layouts/head' %>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <% if current_user %>
+      <%= render 'layouts/navs' %>
+    <% else %>
+      <%= render 'layouts/nav' %>
+    <% end %>
+    <div class="row">
+      <p class="notice"><%= notice %></p>
+    </div>
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>

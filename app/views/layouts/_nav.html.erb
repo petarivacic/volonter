@@ -1,0 +1,26 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+
+    <li class="name">
+      <h1>
+        <a href="#">
+          VOLONTER
+        </a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="left">
+      <li><a href="#"><%= link_to "Nadji Akciju", events_path %></li>
+      <li><a href="#"><%= link_to "Pokreni Akciju", new_event_path %></a></li>
+    </ul>
+
+    <ul class="right">
+      <li class="has-button">
+        <%= link_to "Pomozi", registracija_path, class: "small button" %>
+      </li>
+    </ul>
+  </section>
+</nav>

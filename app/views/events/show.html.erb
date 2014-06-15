@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="large-8 small-12 columns">
+    <div class="row">
+      <div class="small-8 large-8 columns">
+        <h1><%= @event.name %></h1>
+      </div>
+      <div class="large-4 small-4 columns">
+      <h1><%= link_to "Prijavi Se!", register_event_path, class: "small secondary button pull right"%></h1>
+    </div>
+  </div>
+    <span class="label secondary"><%= @event.location %></span>
+    <span class="label success"><%= @event.category %></span>
+    <div class="fb-share-button" data-href="https://volonter.rs/akcije/#{@event.id}" data-type="button_count"></div>
+
+    <hr>
+    <h3 class="subheader"><%= @event.description %></h3>
+    <hr>
+    <div class="fb-comments" data-href="http://volonter.rs/akcije/<%= @event.id %>" data-numposts="5" data-colorscheme="light"></div>
+
+
+  </div>
+
+
+
+
+<div class="large-4 small-12 columns">
+  <img src="https://maps.googleapis.com/maps/api/staticmap?center=44.818441,20.3992720&zoom=14&size=400x400">
+  <div class="hide-for-small panel">
+    <h3><%= @event.date %></h3>
+    <p>
+      <%= @event.adresa %><br>
+      <%= @event.grad %><br>
+      <%= @event.telefon %>
+</p>
+    <a href="#" class="small secondary button">Kontakt</a>
+    <%= link_to "Prijavi Se!", register_event_path, class: "small button"%>
+  </div>
+  <a href="#">
+    <div class="panel callout radius">
+      <h6><%= @event.registrations %> volontera prijavljeno</h6>
+    </div></a>
+  </div>
+
+</div>

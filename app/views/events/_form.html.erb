@@ -1,0 +1,31 @@
+
+<%= simple_form_for @event do |f| %>
+  <div class="large-12 columns">
+  <%= f.input :name, label: false, placeholder: "Naziv Akcije" %>
+  </div>
+  <div class="large-4 columns">
+  <%= f.input :date, label: false, placeholder: "Datum i Vreme"  %>
+  </div>
+  <div class="large-4 columns">
+  <%= f.input :category, label: false, placeholder: "Kategorija"  %>
+  </div>
+  <div class="large-4 columns">
+  <%= f.input :priority, label: false, placeholder: "Prioritet"  %>
+  </div>
+  <div class="large-12 columns">
+  <%= f.input :description, label: false, placeholder: "Opis Akcije", as: :text  %>
+  </div>
+  <hr>
+  <div class="large-12 columns">
+  <%= f.input :adresa, label: false, placeholder: "Adresa Akcije"  %>
+  </div>
+  <div class="large-12 columns">
+  <%= f.input :grad, label: false, placeholder: "Grad"  %>
+  </div>
+  <div class="large-12 columns">
+  <%= f.input :telefon, label: false, placeholder: "Kontakt Telefon"  %>
+  </div>
+  <div class="large-12 columns">
+  <%= f.button :submit, "Pokreni Akciju" %>
+  </div>
+<% end %>
