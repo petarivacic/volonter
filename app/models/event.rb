@@ -1,7 +1,7 @@
 class Event
   include Mongoid::Document
   include Mongoid::Timestamps
-  before_create :create_slug, :get_coordinates
+  before_create :create_slug
 
   field :name, type: String
   field :date, type: String
