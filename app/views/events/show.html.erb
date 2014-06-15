@@ -10,7 +10,7 @@
   </div>
     <span class="label secondary"><%= @event.location %></span>
     <span class="label success"><%= @event.category %></span>
-    <div class="fb-share-button" data-href="http://www.volonter.rs/akcije/#{@event.id}" data-type="button_count"></div>
+    <div class="fb-share-button" data-href="http://www.volonter.rs/akcije/<%= @event.id %>" data-type="button_count"></div>
 
     <hr>
     <h3 class="subheader"><%= @event.description %></h3>
