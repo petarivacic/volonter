@@ -9,6 +9,10 @@ class EventsController < ApplicationController
     @events = Event.all.sort(created_at: -1)
   end
 
+  def potvrdi
+    @event = Event.find(params[:id])
+    redirect_to @event, notice: 'Vasa Akcija Je Potvrdjena. Shareujte akciju na FB kako bi povecali odaziv. ' 
+  end
   # GET /events/1
   # GET /events/1.json
   def show
