@@ -7,7 +7,16 @@
   <%= f.input :date, label: false, placeholder: "Datum i Vreme"  %>
   </div>
   <div class="large-4 columns">
-  <%= f.input :category, label: false, placeholder: "Kategorija"  %>
+  <%= f.input :category, label: false, placeholder: "Kategorija", collection: [
+    "Fizički rad – teži",
+    "Fizički rad – lakši",
+    "Odeća i obuća",
+    "Deca - odeća i obuća",
+    "Bebe - odeća i obuća",
+    "Hrana i voda",
+    "Bebe – Hrana, lekovi i higijena",
+    "Lekovi i higijena",
+    "Posteljina i peškiri"]  %>
   </div>
   <div class="large-4 columns">
   <%= f.input :priority, label: false, placeholder: "Prioritet"  %>
