@@ -5,7 +5,6 @@ production:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: volonter
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       uri: 'mongodb://petar:Beograd1@ds031618.mongolab.com:31618/volonter'
