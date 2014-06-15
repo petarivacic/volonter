@@ -3,9 +3,7 @@
 
     <li class="name">
       <h1>
-        <a href="#">
-          VOLONTER
-        </a>
+        <%= link_to "VOLONTER", root_path %>
       </h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
@@ -13,7 +11,7 @@
 
   <section class="top-bar-section">
     <ul class="left">
-      <li><a href="#"><%= link_to "Nadji Akciju", events_path %></li>
+      <li><a href="#"><%= link_to "Nadji Akciju", root_path %></a></li>
       <li><a href="#"><%= link_to "Pokreni Akciju", new_event_path %></a></li>
     </ul>
 
