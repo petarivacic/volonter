@@ -11,7 +11,7 @@ class EventsController < ApplicationController
 
   def potvrdi
     @event = Event.find(params[:id])
-    redirect_to @event, notice: 'Vasa Akcija Je Potvrdjena. Shareujte akciju na FB kako bi povecali odaziv. ' 
+    redirect_to @event, notice: 'Vasa Akcija Je Potvrdjena. Shareujte akciju na FB kako bi povecali odaziv. '
   end
   # GET /events/1
   # GET /events/1.json
@@ -35,7 +35,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: 'Email sa verifikacijom vam je poslat na vasu email adresu. Molimo potvrdite' }
         format.json { render :show, status: :created, location: @event }
         EventsMailer.create_event(@user).deliver
       else

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   match 'pokreni-akciju', to: 'events#new', via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+  get 'akcije/:id/potvrdi', to: "events#potvrdi"
 
 
   get 'akcije/:id' => 'events#show', as: :event
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
   get '/register' => 'static_pages#registracija', as: :registracija
-  root 'events#index'
+  root 'static_pages#feed'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
